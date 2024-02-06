@@ -1,14 +1,15 @@
+// Android needs the application and Android Kotlin Plugins
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
 }
-
+// Here we have all android specific settings:
 android {
     namespace = "com.niranjan.khatri.kmptutorial.android"
-    compileSdk = 34
+    compileSdk = 34 // Android SDK version to compile against
     defaultConfig {
-        applicationId = "com.niranjan.khatri.kmptutorial.android"
-        minSdk = 24
+        applicationId = "com.niranjan.khatri.kmptutorial.android" // ID for your Android App (unique)
+        minSdk = 24 // lowest Android version your app will run on.
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -26,7 +27,7 @@ android {
     }
     buildTypes {
         getByName("release") {
-            isMinifyEnabled = false
+            isMinifyEnabled = false // set this to true when you're ready to release
         }
     }
     compileOptions {
@@ -39,7 +40,8 @@ android {
 }
 
 dependencies {
-    implementation(projects.shared)
+    implementation(projects.shared) // android depends on the shared module (where all shared business logic reside)
+    // These below are all android-specific libraries
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.material3)

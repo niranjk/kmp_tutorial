@@ -2,10 +2,13 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
-	let greet = Greeting().greet()
-
+    let timeZone = DateTimeHelperImpl().getCurrentTimeZoneId()
+    
+    
 	var body: some View {
-		Text(greet)
+        let date = DateTimeHelperImpl().getDate(timezoneId:timeZone)
+        Text(timeZone)
+		Text(date)
 	}
 }
 

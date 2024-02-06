@@ -1,10 +1,12 @@
 [versions]
 agp = "8.1.1"
 kotlin = "1.9.20"
-compose = "1.5.4"
+compose = "1.6.0"
 compose-compiler = "1.5.4"
 compose-material3 = "1.1.2"
 androidx-activityCompose = "1.8.0"
+kotlinx-datetime-v = "0.5.0"
+napier-v = "2.7.1"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -14,6 +16,8 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 compose-foundation = { module = "androidx.compose.foundation:foundation", version.ref = "compose" }
 compose-material3 = { module = "androidx.compose.material3:material3", version.ref = "compose-material3" }
+kotlin-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime-v"}
+napier-logging = { module = "io.github.aakira:napier", version.ref = "napier-v"}
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
