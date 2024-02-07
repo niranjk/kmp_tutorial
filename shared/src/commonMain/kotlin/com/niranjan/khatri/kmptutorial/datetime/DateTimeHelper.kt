@@ -9,4 +9,7 @@ interface DateTimeHelper {
 
     // Return the formatted date for the given time zone
     fun getDate(timezoneId: String): String
+
+    // Returns all time zone strings
+    fun getTimeZoneStrings(): List<String>
 }

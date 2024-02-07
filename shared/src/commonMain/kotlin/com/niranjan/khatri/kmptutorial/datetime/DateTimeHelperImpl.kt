@@ -8,6 +8,10 @@ import kotlinx.datetime.toLocalDateTime
 
 class DateTimeHelperImpl : DateTimeHelper{
 
+    override fun getTimeZoneStrings(): List<String> {
+        return TimeZone.availableZoneIds.sorted()
+    }
+
     fun formatDateTime(dateTime: LocalDateTime): String{
         // StringBuilder is used to build the string piece by piece.
         val stringBuilder = StringBuilder()
