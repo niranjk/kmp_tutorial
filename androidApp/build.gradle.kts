@@ -2,11 +2,12 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.compose.compiler)
 }
 // Here we have all android specific settings:
 android {
     namespace = "com.niranjan.khatri.kmptutorial.android"
-    compileSdk = 34 // Android SDK version to compile against
+    compileSdk = 35 // Android SDK version to compile against
     defaultConfig {
         applicationId = "com.niranjan.khatri.kmptutorial.android" // ID for your Android App (unique)
         minSdk = 24 // lowest Android version your app will run on.
@@ -16,9 +17,6 @@ android {
     }
     buildFeatures {
         compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get()
     }
     packaging {
         resources {

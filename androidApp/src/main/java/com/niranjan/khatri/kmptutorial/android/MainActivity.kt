@@ -11,6 +11,8 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.PreviewFontScale
+import androidx.compose.ui.tooling.preview.PreviewScreenSizes
 import com.niranjan.khatri.kmptutorial.android.ui.MainView
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
@@ -40,7 +42,9 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@PreviewScreenSizes
 @Preview
+@PreviewFontScale
 @Composable
 fun DefaultPreview() {
     MyApplicationTheme {
