@@ -3,17 +3,17 @@ package com.niranjan.khatri.kmptutorial.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
-import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.PreviewFontScale
 import androidx.compose.ui.tooling.preview.PreviewScreenSizes
 import com.niranjan.khatri.kmptutorial.android.ui.MainView
+import com.niranjan.khatri.kmptutorial.android.ui.car.ListScreen
 import io.github.aakira.napier.DebugAntilog
 import io.github.aakira.napier.Napier
 
@@ -24,6 +24,7 @@ class MainActivity : ComponentActivity() {
         Napier.base(DebugAntilog()) // Initialize Napier Logging library
         setContent {
             MyApplicationTheme {
+                /*
                 MainView {
                     TopAppBar(
                         title = {
@@ -36,6 +37,14 @@ class MainActivity : ComponentActivity() {
                             containerColor = MaterialTheme.colorScheme.primary
                         )
                     )
+                }
+
+                 */
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background,
+                ) {
+                    ListScreen(applicationContext)
                 }
             }
         }

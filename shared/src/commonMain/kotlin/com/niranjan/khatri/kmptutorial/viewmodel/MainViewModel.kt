@@ -28,15 +28,15 @@ class MainViewModel(private val repository: DataRepository) : ViewModel() {
                 initialValue = HomeUiState(),
             )
 
-    val cartUiState: StateFlow<CartUiState> =
-        repository.carDetails.map { CartUiState(it) }
+    val storeUiState: StateFlow<StoreUiState> =
+        repository.carDetails.map { StoreUiState(it) }
             .stateIn(
                 scope = viewModelScope,
                 started = SharingStarted.WhileSubscribed(TIMEOUT_MILLIS),
-                initialValue = CartUiState(),
+                initialValue = StoreUiState(),
             )
 
-    fun addItemToCart(car: Car) {
+    fun addItemToStore(car: Car) {
         viewModelScope.launch {
             repository.addToCart(car)
         }
@@ -80,6 +80,6 @@ data class HomeUiState(val carList: List<Car> = listOf())
 /**
  * Ui State for the cart
  */
-data class CartUiState(val cartDetails: List<CarItemDetails> = listOf())
+data class StoreUiState(val storeDetails: List<CarItemDetails> = listOf())
 
 private const val TIMEOUT_MILLIS = 5_000L

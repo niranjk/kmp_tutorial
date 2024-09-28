@@ -46,7 +46,26 @@ class DataRepository(
     }
 
     suspend fun refreshData() {
-        val response = listOf<Car>(Car(1, "Maruti", "Maruti A2Z"))
+        val response = mockCars
         database.carDao().insert(response)
     }
 }
+
+data class Car(
+    @androidx.room.PrimaryKey(autoGenerate = true) val id: Int = 0,
+    val name: String,
+    val brand: String
+)
+
+val mockCars = listOf(
+    Car(id = 1, name = "Civic", brand = "Honda"),
+    Car(id = 2, name = "Accord", brand = "Honda"),
+    Car(id = 3, name = "Camry", brand = "Toyota"),
+    Car(id = 4, name = "Corolla", brand = "Toyota"),
+    Car(id = 5, name = "Model 3", brand = "Tesla"),
+    Car(id = 6, name = "Model S", brand = "Tesla"),
+    Car(id = 7, name = "Mustang", brand = "Ford"),
+    Car(id = 8, name = "F-150", brand = "Ford"),
+    Car(id = 9, name = "Golf", brand = "Volkswagen"),
+    Car(id = 10, name = "Jetta", brand = "Volkswagen")
+)

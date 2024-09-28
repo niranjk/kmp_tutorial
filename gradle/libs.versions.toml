@@ -14,6 +14,7 @@ sqlite = "2.5.0-alpha08"
 dataStoreVersion = "1.1.1"
 kotlinx-coroutines = "1.8.0"
 androidx-lifecycle = "2.9.0-alpha01"
+skie = "0.8.4"
 
 
 [libraries]
@@ -51,4 +52,4 @@ kotlinxSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", versi
 room = { id = "androidx.room", version.ref = "androidxRoom" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-
+skie = { id = "co.touchlab.skie", version.ref = "skie" }

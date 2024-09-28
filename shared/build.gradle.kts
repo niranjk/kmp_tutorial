@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.kotlinxSerialization)
     alias(libs.plugins.room)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.skie) // Skie Library From Touchlab to support flows in SwiftUi
 }
 
 kotlin {
@@ -74,4 +75,10 @@ dependencies {
 // Room
 room {
     schemaDirectory("$projectDir/schemas")
+}
+
+skie {
+    features {
+        enableSwiftUIObservingPreview = true
+    }
 }

@@ -5,4 +5,8 @@
     <string name="time_zone">Time Zone</string>
     <string name="time_search">Time Search</string>
     <string name="done">Done</string>
+    <string name="cars">"Cars"</string>
+    <string name="save">Save</string>
+    <string name="loading">Loading</string>
+    <string name="retry">Retry</string>
 </resources>
